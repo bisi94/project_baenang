@@ -153,30 +153,6 @@
 
 <!-- ---------------------------------------------------------------------- -->
 
-<%-- ---------------------------- 검색 관련 뷰페이지 컨텐트 ---------------------------- --%>
-
-    <div id="search-container" class="justify-content-center align-items-center">
-		<div id="search_block">
-	        <form action="#" method="GET">
-	        	
-        		<input type="text" id="search-box" name="search" placeholder="어디로 여행을 떠나시나요?"
-			       class="form-control dropdown-toggle" data-toggle="dropdown"
-			       aria	-haspopup="true" aria-expanded="false" oninput="onKeywordInput()">
-			       
-			    <a href="/plan"><img src="${pageContext.request.contextPath}/resources/img/main/search.png" alt="search"></a>
-	            <!-- 
-	           	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				    <a class="dropdown-item" id="search_content1" onclick="openPopup('서울')"><img alt="SeoulIMG" src="${pageContext.request.contextPath}/resources/img/cities/Seoul.png"> 서울 </a>
-				    <a class="dropdown-item" id="search_content2" onclick="openPopup('대전')"><img alt="DaejeonIMG" src="${pageContext.request.contextPath}/resources/img/cities/Daejeon.png"> 대전 </a>
-				    <a class="dropdown-item" id="search_content3" onclick="openPopup('제주')"><img alt="JejuIMG" src="${pageContext.request.contextPath}/resources/img/cities/Jeju.png"> 제주 </a>
-				    <a class="dropdown-item" id="search_content4" onclick="openPopup('강릉')"><img alt="GangneungIMG" src="${pageContext.request.contextPath}/resources/img/cities/Gangneung.png"> 강릉 </a>
-				    <a class="dropdown-item" id="search_content5" onclick="openPopup('부산')"><img alt="BusanIMG" src="${pageContext.request.contextPath}/resources/img/cities/Busan.png"> 부산 </a>
-				</div>
-	             -->
-	        </form>
-        </div>
-    </div>
-<%-- ----------------------------------------------------------------------------- --%>    
 
 
 <script>
@@ -246,6 +222,22 @@ function onKeywordInput() {
 }
 
 --------------------------------------------------------- --%>
+
+<%-- ---------------------------- 검색 관련 뷰페이지 컨텐트 ---------------------------- --%>
+
+    <div id="search-container" class="justify-content-center align-items-center">
+		<div id="search_block">
+	        <form action="#" method="GET">
+	        	
+        		<input type="text" id="search-box" name="search" placeholder="어디로 여행을 떠나시나요?"
+ 				oninput="onKeywordInput()">
+			       
+			    <a href="/plan"><img src="${pageContext.request.contextPath}/resources/img/main/search.png" alt="search"></a>
+
+	        </form>
+        </div>
+    </div>
+<%-- ----------------------------------------------------------------------------- --%>    
 
 <%-- ------------------------관광도시 검색기능 ------------------------- --%>
 <script>
