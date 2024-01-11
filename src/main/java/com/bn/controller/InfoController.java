@@ -33,6 +33,7 @@ public class InfoController {
 	private CityVo civo;
 	
 	//------------------------ main.jsp 도시 목록의 info버튼 클릭시 요청을 받도록 설계 -----------------------------
+	//db의 city테이블은 수작업한 sql문으로 데이터를 입력해야 함.
 	@RequestMapping("/cityInfo")
 	public String cityInfo(@RequestParam String cityname, Model model) {
 		
@@ -52,6 +53,7 @@ public class InfoController {
 	//----------------------------------------------------------------------------------------------------
 	
 	//---------------------- plan에서 검색된 관광지 목록의 info버튼 클릭시 요청을 받도록 설계 -------------------------
+	//관광지 데이터는 오픈api를 이용하여 데이터를 db에 집어넣는다. db에 해당 contentid의 overview컬럼의 값이 비어있으면 api 호출 및 데이터 insert 
 	@RequestMapping("/tourInfo")
 	public String tourInfo(@RequestParam String contentid, Model model) {
 		

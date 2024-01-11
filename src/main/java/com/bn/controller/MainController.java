@@ -59,6 +59,12 @@ public class MainController {
 		}catch(Exception e) {
 			
 		}
+		
+	    if (result != null) {
+	        for (CityVo city : result) {
+	            System.out.println("Received cityName: " + city.getCityname());
+	        }
+	    }
 		 
 		 return result;
 	 }

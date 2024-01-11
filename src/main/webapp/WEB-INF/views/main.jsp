@@ -253,6 +253,9 @@ function onKeywordInput() {
         cache: false,
         processData: true,
         success: function (cityList) {
+        	
+        	 // 서버에서 받아온 cityList를 콘솔에 출력
+            console.log('Received cityList:', cityList);
 			
          	// cityList가 null이거나 비어있을 경우 처리
             if (!cityList || cityList.length === 0) {
